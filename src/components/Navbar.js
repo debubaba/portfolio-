@@ -23,12 +23,13 @@ import {
   ContactMail
 } from '@material-ui/icons';
 import avatar from '../images/avatar.png';
+import SocialTray from './socialTray.js'
 
 const useStyles = makeStyles(theme => ({
   menuSliderContainer: {
     width: "100%",
     background: "#145777",
-    height: "30rem"
+    height: "fit-content"
   },
   avatar: {
     display: "block",
@@ -38,6 +39,13 @@ const useStyles = makeStyles(theme => ({
   },
   listItem: {
     color: "#D6C8A8",
+  },
+  root: {
+    position: "fixed",
+    top: 0,
+    width: "100%",
+    height: "3rem",
+    zIndex: 1202
   }
 }));
 
@@ -60,7 +68,7 @@ const menuItems = [
   {
     listIcon: <ContactMail />,
     listText: "Contact",
-    listPath: "/"
+    listPath: "/contact"
   }
 ]
 
@@ -100,12 +108,14 @@ const Navbar = () => {
         </ListItem>
       ))}
       </List>
+      <Divider />
+      <SocialTray  />
     </Box>
 
   );
   return(
     <>
-      <Box component="nav">
+      <Box component="nav" className={classes.root}>
         <AppBar position="static" style={{background: "#1A474C"}}>
           <Toolbar>
             <IconButton onClick={toggleSlider("right", true)}>

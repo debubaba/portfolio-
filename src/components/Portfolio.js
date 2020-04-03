@@ -47,7 +47,8 @@ const useStyles = makeStyles({
     color: "#E79E2A",
     background: "#534A43",
     borderBottom: "2px solid #E79E2A",
-    padding: "2rem 0 2rem 0"
+    padding: "2rem 0 2rem 0",
+    marginTop: "4rem"
   },
   link: {
     margin: "0 auto 0 auto",
