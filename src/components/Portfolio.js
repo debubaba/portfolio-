@@ -7,9 +7,11 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 
 import Navbar from './Navbar.js'
+import Particles from 'react-particles-js'
 
 const useStyles = makeStyles({
   root: {
@@ -48,7 +50,7 @@ const useStyles = makeStyles({
     background: "#534A43",
     borderBottom: "2px solid #E79E2A",
     padding: "2rem 0 2rem 0",
-    marginTop: "4rem"
+    marginTop: "3.5rem"
   },
   link: {
     margin: "0 auto 0 auto",
@@ -63,12 +65,45 @@ export default function ImgMediaCard() {
   const classes = useStyles();
 
   return (
-  <>
+  <Box variant="div">
+
     <Navbar />
     <Typography variant="h2" className={classes.title}>
       Projects portfolio
     </Typography>
     <Grid container alignContent="space-around" align="center">
+    <Grid item xs={12} md={6} lg={3}>
+              <Card className={classes.root}>
+                <CardActionArea className={classes.data}>
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2" className={classes.heading}>
+                      Portfolio
+                    </Typography>
+                    <Typography gutterBottom variant="h6" className={classes.subheading}>
+                      Independent project
+                    </Typography>
+                    <Typography variant="body2"component="p" className={classes.desc}>
+                      Created a portfolio website for myself showcasing my skills, my work experience and projects i have been a part of.
+                    </Typography>
+                    <CardMedia
+                      component="img"
+                      alt="React.Js project"
+                      image={require("../images/react.png")}
+                      title="react.js project"
+                      className={classes.image}
+                    />
+                    <Typography variant="subtitle1" className={classes.desc}>
+                      Created Using: HTML/CSS, React.JS
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" className={classes.link} href="https://github.com/debubaba/portfolio-">
+                    Github Link
+                  </Button>
+                </CardActions>
+              </Card>
+    </Grid>
     <Grid item xs={12} md={6} lg={3}>
               <Card className={classes.root}>
                 <CardActionArea className={classes.data}>
@@ -330,6 +365,6 @@ Parkinson, Diabetes, Brain haemorrhage and Breast Cancer
       </Grid>
     </Grid>
 
-  </>
+  </Box>
   );
 }

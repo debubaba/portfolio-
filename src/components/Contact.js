@@ -8,6 +8,7 @@ import {
   Grid
 } from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
+import Particles from 'react-particles-js'
 
 import Navbar from './Navbar.js'
 import SocialTray from './socialTray.js'
@@ -58,6 +59,7 @@ function Contact() {
     const classes = useStyles();
     return(
       <>
+          
         <Navbar />
         <Box variant="div" style={{fontFamily: "'Montserrat', sans-serif"}}>
           <Typography variant="h4" className={classes.heading}>

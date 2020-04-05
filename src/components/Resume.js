@@ -2,11 +2,12 @@ import React from 'react';
 import {makeStyles} from "@material-ui/core/styles"
 import {Typography, Box} from '@material-ui/core'
 import Navbar from './Navbar.js'
+import Particles from 'react-particles-js'
 
 const useStyles = makeStyles(theme=>({
   mainContainer: {
     background: "",
-    marginTop: "4rem"
+    marginTop: "3.5rem"
   },
   timeLine: {
     position: "relative",
@@ -112,6 +113,7 @@ const Resume = () => {
   const classes = useStyles();
   return(
     <>
+
       <Navbar />
       <Box component="header" className={classes.mainContainer}>
         <Typography variant="h4" align="center" className={classes.heading}>

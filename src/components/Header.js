@@ -1,5 +1,6 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles'
+import Particles from 'react-particles-js';
 import {
   Typography,
   Avatar,
@@ -16,21 +17,29 @@ const useStyles = makeStyles(theme=>({
   avatar: {
     width: theme.spacing(25),
     height: theme.spacing(25),
+    marginTop: theme.spacing(0)
   },
   title: {
-    color: "#E79E2A"
+    color: "#E79E2A",
+    zIndex: 1,
+    textShadow: "0 2px 1px #747474, -1px 3px 1px #767676, -2px 5px 1px #787878, -3px 7px 1px #7a7a7a, -4px 9px 1px #7f7f7f, -5px 11px 1px #838383"
   },
   subtitle: {
     color: "#D6C8A8",
-    marginBottom: "3rem"
-  },
+    marginBottom: "3rem",
+    zIndex: 1,
+    textShadow: "0 2px 1px #747474, -1px 3px 1px #767676, -2px 5px 1px #787878, -3px 7px 1px #7a7a7a, -4px 9px 1px #7f7f7f, -5px 11px 1px #838383"
+
+    },
   typedContainer: {
     transform: "translate(-50%, -50%)",
     width: "100vw",
     textAlign: "center",
     zIndex: 1,
     overflowX: "hidden",
-    margin: "20rem 0 0 50%"
+    margin: "0 0 -36rem 50%",
+    padding: "50rem 0 10rem 0",
+    background: "#145777"
   },
   about: {
     background: "#534A43",
@@ -49,9 +58,6 @@ const useStyles = makeStyles(theme=>({
     [theme.breakpoints.down('md')]: {
       fontSize: "1.2rem"
     },
-    skill: {
-      color: "#E79E2A",
-    }
   }
 }))
 
@@ -137,19 +143,55 @@ const menuItems = [
   }
 ]
 
+
 const Header = () => {
   const classes = useStyles();
   return(
     <>
-      <Box className={classes.typedContainer}>
-        <Grid container justify="center">
-          <Avatar className={classes.avatar} src={avatar} alt="Siddharth Deb" />
-        </Grid>
-        <Typography className={classes.title} variant="h4">
-          <Typed strings={["Siddharth Deb"]} typeSpeed={40} />
+      <Box className={classes.typedContainer} >
+      <Particles
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        zIndex: -1
+      }}
+            params={{
+        "particles": {
+            "number": {
+                "value": 150,
+                "density": {
+                    "enable": true,
+                    "value_area": 1000
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "opacity": 0
+            },
+            "move": {
+                "direction": "random",
+                "speed": 0.8
+            },
+            "size": {
+                "value": 10
+            },
+            "opacity": {
+                "anim": {
+                    "enable": true,
+                    "speed": 0.5,
+                    "opacity_min": 0.05
+                }
+            }
+        },
+
+        "retina_detect": true
+      }}
+      	     />
+        <Typography className={classes.title} variant="h3">
+          Siddharth Deb
         </Typography>
-        <br />
-        <Typography className={classes.subtitle} variant="h5">
+        <Typography className={classes.subtitle} variant="h4">
           <Typed
           strings={["Web Developer", "Web Designer", "Coder"]}
           typeSpeed={40}
@@ -191,9 +233,8 @@ const Header = () => {
           {items.map((isItem, key)=>(
           <Grid item xs={4} md={2}
           style={{
-            margin: "1rem 0",
             textAlign: "center",
-            padding: "1rem",
+            padding: "1rem 1rem 1rem 1rem",
           }}>
             <img
             key={key}
@@ -204,7 +245,8 @@ const Header = () => {
             variant='h6'
             style={{
               color: "#E79E2A",
-              fontSize: "0.9rem"
+              fontSize: "0.9rem",
+              fontWeight: 900
             }}
             >
             {isItem.name}
