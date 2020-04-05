@@ -47,10 +47,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline/>
       <ScrollToTop />
-      <Route exact path={process.env.PUBLIC_URL+'/'} component={Home} />
-      <Route exact path={process.env.PUBLIC_URL+'/resume'} component={Resume} />
-      <Route exact path={process.env.PUBLIC_URL+'/portfolio'} component={Portfolio} />
-      <Route exact path={process.env.PUBLIC_URL+'/contact'} component={Contact} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/resume" component={Resume} />
+      <Route exact path="/portfolio" component={Portfolio} />
+      <Route exact path="/contact" component={Contact} />
     </ThemeProvider>
     </>
   );
