@@ -1,6 +1,11 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/core/styles"
-import {Typography, Box} from '@material-ui/core'
+import {
+  Typography,
+  Box,
+  Grid,
+  Button
+} from '@material-ui/core'
 import Navbar from './Navbar.js'
 import Particles from 'react-particles-js'
 
@@ -106,6 +111,22 @@ const useStyles = makeStyles(theme=>({
     color: "#E79E2A",
     padding: "0",
     textTransform: "uppercase"
+  },
+  about: {
+    background: "#534A43",
+    padding: "2rem",
+    minHeight: "25rem"
+  },
+  head: {
+    color: "#E79E2A",
+    padding: "1rem"
+  },
+  subhead: {
+    color: "#D6C8A8",
+    borderLeft: "1px solid #E79E2A",
+    fontSize: "1.2rem",
+    padding: "1rem",
+
   }
 }));
 
@@ -187,6 +208,94 @@ the aforementioned. Have previously worked as coordinator for ARCS'2019 as well.
                </Typography>
               </Box>
           </Box>
+      </Box>
+      <Box variant='div' className={classes.about}>
+      <Grid container>
+        <Grid item xs={12} lg={6}>
+            <Grid container>
+              <Grid item xs={12} className={classes.head}>
+                <Typography variant='h3'>
+                  Achievements
+                </Typography>
+              </Grid>
+              <Grid item xs={12} className={classes.subhead}>
+                <Typography variant='subheading1'>
+                  <ul>
+                    <li>
+                    Represented IEEE Computer Society VIT Vellore at All India Computer Society Student
+                    & Young Professional Congress (AICSSYC),the annual flagship event for IEEE
+                    Computer Society Members In India
+                    </li>
+                    <li>
+                    Worked as Coordinator at ARCS'19, the annual flagship technical symposium organized
+                    by IEEE Computer Society Student Chapter VIT Vellore
+                    </li>
+                    <li>
+                    Worked as Manager at ARCS'20, the annual flagship technical symposium organized by
+                    IEEE Computer Society Student Chapter VIT Vellore
+                    </li>
+                    <li>
+                    Participated in Hack-a-thon on Development of API for Smart Resource Usages in Smart
+                    Devices held at Vellore institute of technology
+                    </li>
+                    <li>
+                    Participated in Devjams'19 Hackathon organised by DSC VIT
+                    </li>
+                    <li>
+                    Participated in Code2Create'20 organised by ACM VIT
+                    </li>
+                  </ul>
+                </Typography>
+
+              </Grid>
+            </Grid>
+        </Grid>
+        <Grid item xs={12} lg={6}>
+            <Grid container>
+              <Grid item xs={12} className={classes.head}>
+                <Typography variant='h3'>
+                  Co-Curricular Activities
+                </Typography>
+              </Grid>
+              <Grid item xs={12} className={classes.subhead}>
+                <Typography variant='subheading1'>
+                  <ul>
+                    <li>
+                    Worked as volunteer in Dream World Film Festival organized by VIT Film Society
+                    </li>
+                    <li>
+                    Directed a short film Gudiya
+                      (<Button
+                      href="https://youtu.be/q4uy0j-_Ze0"
+                      style={{
+                        color: "#D6C8A8",
+
+                      }}>
+                       Check it out!
+                      </Button>)
+                    </li>
+                    <li>
+                    Took part in VIT Technical United Conference
+                    </li>
+                    <li>
+                    Gold medalist in swimming at school level
+                    </li>
+                    <li>
+                    Performed at AIKYA 2020, a cultural dance performance held during Riviera 2020
+                    college festival of VIT Vellore
+                    </li>
+                    <li>
+                    Have organised and taught at Night Technical In-core sessions for new core Committee
+                    members of IEEE Computer Society Student Chapter VIT Vellore
+                    </li>
+                  </ul>
+                </Typography>
+
+              </Grid>
+            </Grid>
+        </Grid>
+      </Grid>
+
       </Box>
     </>
   )
