@@ -6,7 +6,7 @@ import {
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
-  <Router  onUpdate={() => window.scrollTo(0, 0)} basename={process.env.PUBLIC_URL}>
+  <Router  onUpdate={() => window.scrollTo(0, 0)} >
     <App />
   </Router>,
   document.getElementById('root')

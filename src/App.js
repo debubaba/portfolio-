@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Route} from 'react-router-dom'
+import {Route, HashRouter} from 'react-router-dom'
 import ScrollToTop from './ScrollToTop.js'
 import Home from './components/index.js'
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -44,6 +44,7 @@ function App() {
 
   return (
     <>
+    <HashRouter basename="/">
     <ThemeProvider theme={theme}>
       <CssBaseline/>
       <ScrollToTop />
@@ -52,6 +53,7 @@ function App() {
       <Route exact path="/portfolio" component={Portfolio} />
       <Route exact path="/contact" component={Contact} />
     </ThemeProvider>
+    </HashRouter>
     </>
   );
 }
