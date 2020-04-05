@@ -214,7 +214,7 @@ the aforementioned. Have previously worked as coordinator for ARCS'2019 as well.
         <Grid item xs={12} lg={6}>
             <Grid container>
               <Grid item xs={12} className={classes.head}>
-                <Typography variant='h3'>
+                <Typography variant='h4'>
                   Achievements
                 </Typography>
               </Grid>
@@ -253,7 +253,7 @@ the aforementioned. Have previously worked as coordinator for ARCS'2019 as well.
         <Grid item xs={12} lg={6}>
             <Grid container>
               <Grid item xs={12} className={classes.head}>
-                <Typography variant='h3'>
+                <Typography variant='h4'>
                   Co-Curricular Activities
                 </Typography>
               </Grid>
