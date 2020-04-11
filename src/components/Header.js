@@ -230,7 +230,7 @@ const Header = () => {
           </Grid>
           <Grid item xs={12} lg={6}  className={classes.subheading}>
             <Typography variant='subheading1'>
-              I am a computer science student with experience in working as a web developer and designer in various projects.
+              I am a second year computer science student with experience in working as a web developer and designer in various projects.
               I also have extensive marketing, sales and event management experience, particularly within a
               higher education setting.
               <br /><br />

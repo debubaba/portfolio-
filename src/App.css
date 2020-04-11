@@ -1,5 +1,6 @@
 body{
   background: url('./images/adv2.png') no-repeat center fixed;
+  background-position: bottom;
   -webkit-background: cover;
   -moz-background: cover;
   -o-background: cover;
