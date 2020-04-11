@@ -15,9 +15,9 @@ import avatar from "../images/avatar.png"
 //css styles
 const useStyles = makeStyles(theme=>({
   avatar: {
-    width: theme.spacing(25),
+    width: theme.spacing(20),
     height: theme.spacing(25),
-    marginTop: theme.spacing(0)
+    margin: "0 auto"
   },
   title: {
     color: "#E79E2A",
@@ -37,13 +37,12 @@ const useStyles = makeStyles(theme=>({
     textAlign: "center",
     zIndex: 1,
     overflowX: "hidden",
-    margin: "0 0 -36rem 50%",
+    margin: "0 0 -40rem 50%",
     padding: "50rem 0 10rem 0",
-    background: "#145777"
   },
   about: {
     background: "#534A43",
-    padding: "2rem",
+    padding: "1rem",
     minHeight: "25rem"
   },
   heading: {
@@ -58,6 +57,7 @@ const useStyles = makeStyles(theme=>({
     [theme.breakpoints.down('md')]: {
       fontSize: "1.2rem"
     },
+
   }
 }))
 
@@ -71,16 +71,40 @@ const items = [
     img: 'css.png'
   },
   {
+    name: "Javascript",
+    img: 'javascript.svg'
+  },
+  {
+    name: "React.Js",
+    img: 'react.png'
+  },
+  {
+    name: "Redux",
+    img: 'redux.png'
+  },
+  {
+    name: "Firebase",
+    img: 'firebase.png'
+  },
+  {
+    name: "Photoshop",
+    img: 'photoshop.png'
+  },
+  {
+    name: "Material-UI",
+    img: 'materialui.png'
+  },
+  {
+    name: "Materialize",
+    img: 'materialize.png'
+  },
+  {
     name: "Bootstrap",
     img: 'bootstrap.png'
   },
   {
     name: "Sass",
     img: 'sass.png'
-  },
-  {
-    name: "React.Js",
-    img: 'react.png'
   },
   {
     name: "Node.Js",
@@ -136,10 +160,6 @@ const menuItems = [
   {
     listText: "Portfolio",
     listPath: "/portfolio"
-  },
-  {
-    listText: "Contact",
-    listPath: "/contact"
   }
 ]
 
@@ -188,12 +208,14 @@ const Header = () => {
         "retina_detect": true
       }}
       	     />
+
         <Typography className={classes.title} variant="h3">
           Siddharth Deb
         </Typography>
+        <img src={avatar} alt="Siddharth Deb" className={classes.avatar}/>
         <Typography className={classes.subtitle} variant="h4">
           <Typed
-          strings={["Web Developer", "Web Designer", "Coder"]}
+          strings={["Web Developer", "Designer", "Coder"]}
           typeSpeed={40}
           backSpeed={60}
           loop/>
@@ -208,18 +230,28 @@ const Header = () => {
           </Grid>
           <Grid item xs={12} lg={6}  className={classes.subheading}>
             <Typography variant='subheading1'>
-              I am a computer science student with experience in working as a front-end and back-end web developer with various projects.
-
+              I am a computer science student with experience in working as a web developer and designer in various projects.
               I also have extensive marketing, sales and event management experience, particularly within a
               higher education setting.
-              <br />
-              I aim to advance my web development skills further and get into freelancing.
+              <br /><br />
+              I love designing and developing websites and aim to make a living out of it. I am a beginner in Photoshop and also make digital art in my spare time.
+              I am very passionate about building things that are not only functionally precise but also aesthetically pleasing.
+              <br /><br />
+              If you like my work or you wish to offer any oppurtunities, you could get in touch with me by visiting my
+              'Contact Me' page (<Link to='/contact' style={{
+                textDecoration: "none",
+                color: "#D6C8A8"
+              }}>Click here!</Link>).
             </Typography>
 
           </Grid>
         </Grid>
       </Box>
-      <Box variant='div'>
+      <Box variant='div' style={{
+        backgroundColor: "rgba(255, 255, 255, 0.5)",
+        margin: "1rem",
+        maxWidth: "98%"
+      }}>
         <Grid container justify="center">
           <Grid item xs={12}>
             <Typography
@@ -244,7 +276,7 @@ const Header = () => {
             <Typography
             variant='h6'
             style={{
-              color: "#E79E2A",
+              color: "#145777",
               fontSize: "0.9rem",
               fontWeight: 900
             }}
@@ -269,11 +301,11 @@ const Header = () => {
             className={classes.heading}
             style={{textAlign: "center"}}
             >
-              Let's go
+              Check out my work!
             </Typography>
           </Grid>
           {menuItems.map((isItem, key)=>(
-          <Grid item xs={12} md={4}
+          <Grid item xs={6}
           style={{
             textAlign: "center"
           }}>

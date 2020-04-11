@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     backgroundStyle: "cover",
     height: "8rem",
     width:" 8rem",
-    margin: "0 auto 0 auto"
+    margin: "0 auto 0 auto",
   },
   heading: {
     color: "#E79E2A",
@@ -71,7 +71,39 @@ export default function ImgMediaCard() {
     <Typography variant="h2" className={classes.title}>
       Projects portfolio
     </Typography>
-    <Grid container alignContent="space-around" align="center">
+    <Grid container alignContent="space-around" >
+    <Grid item xs={12} md={6} lg={3}>
+              <Card className={classes.root}>
+                <CardActionArea className={classes.data}>
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2" className={classes.heading}>
+                      Project planner
+                    </Typography>
+                    <Typography gutterBottom variant="h6" className={classes.subheading}>
+                      Independent project
+                    </Typography>
+                    <Typography variant="body2"component="p" className={classes.desc}>
+                      Created a project planner with fully-functional user authentication system.
+                    </Typography>
+                    <CardMedia
+                      component="img"
+                      alt="React-Redux-Firebase project"
+                      image={require("../images/firebase.png")}
+                      title="react redux firebase project"
+                      className={classes.image}
+                    />
+                    <Typography variant="subtitle1" className={classes.desc}>
+                      Created Using: React.JS, Redux, Firebase
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" className={classes.link} href="https://github.com/debubaba/Project-planner">
+                    Github Link
+                  </Button>
+                </CardActions>
+              </Card>
+    </Grid>
     <Grid item xs={12} md={6} lg={3}>
               <Card className={classes.root}>
                 <CardActionArea className={classes.data}>

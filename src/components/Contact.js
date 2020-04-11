@@ -33,7 +33,9 @@ const useStyles = makeStyles({
   },
   image: {
     borderRadius: "5%",
-    maxWidth: "25rem"
+    maxWidth: "25rem",
+    background: "#E79E2A",
+    padding: "0 0.5rem 0.5rem 0"
   },
   title: {
     color: "#E79E2A",
@@ -59,19 +61,20 @@ function Contact() {
     const classes = useStyles();
     return(
       <>
-          
+
         <Navbar />
         <Box variant="div" style={{fontFamily: "'Montserrat', sans-serif"}}>
           <Typography variant="h4" className={classes.heading}>
             Contact Me
           </Typography>
         </Box>
+
         <Grid container>
           <Grid item xs={12} md={6} className={classes.item}>
             <Card className={classes.card}>
               <CardMedia
               component="img"
-              image={require('../images/contactPic.jpg')}
+              image={require('../images/contactPic2.png')}
               title="It's ya boi"
               className={classes.image}
               />

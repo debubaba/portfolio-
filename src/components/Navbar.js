@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
   avatar: {
     display: "block",
     margin: "0.5rem auto",
-    width: theme.spacing(13),
+    width: theme.spacing(10),
     height: theme.spacing(13),
   },
   listItem: {
@@ -89,7 +89,7 @@ const Navbar = () => {
     className={classes.menuSliderContainer}
     onClick={toggleSlider(slider, false)}
     >
-      <Avatar src={avatar} alt="Siddharth Deb" className={classes.avatar}/>
+      <img src={avatar} alt="Siddharth Deb" className={classes.avatar}/>
       <Divider />
       <List>
       {menuItems.map((isItem, key)=>(
