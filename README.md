@@ -2,6 +2,6 @@ Created a portfolio website for myself showcasing my skills, my work experience 
 
 This website was designed and developed by using React.Js
 
-Avatar, Favicon designed by:
-Muskan Agrawal
-Insta: https://instagram.com/muskan_0220?igshid=1kjmd6m4xzdsg
+Avatar, Favicon designed by me.
+
+The artwork used as background is also created by me.
