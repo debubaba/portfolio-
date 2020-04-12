@@ -235,7 +235,7 @@ const Header = () => {
               higher education setting.
               <br /><br />
               I love designing and developing websites and aim to make a living out of it. I am a beginner in Photoshop and also make digital art in my spare time.
-              I am very passionate about building things that are not only functionally precise but also aesthetically pleasing.
+              The artwork used as background, the fonticons and the avatar have all been created by me. I am very passionate about building things that are not only functionally precise but also aesthetically pleasing.
               <br /><br />
               If you like my work or you wish to offer any oppurtunities, you could get in touch with me by visiting my
               'Contact Me' page (<Link to='/contact' style={{
